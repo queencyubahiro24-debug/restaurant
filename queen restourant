@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshBite Restaurant</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">FreshBite</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Fresh. Tasty. Homemade.</h1>
+            <p>Experience gourmet meals crafted with passion and the freshest ingredients.</p>
+            <button class="cta" onclick="openBooking()">Reserve Your Table</button>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2 class="section-title">Our Best Sellers</h2>
+
+        <div class="menu-grid">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1605478251315-52f90defcc10" alt="">
+                <h3>Grilled Chicken</h3>
+                <p>Marinated with herbs, grilled to perfection.</p>
+                <span>$12</span>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
+                <h3>Classic Beef Burger</h3>
+                <p>Juicy beef with melted cheese & fresh toppings.</p>
+                <span>$10</span>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+                <h3>Veggie Pasta</h3>
+                <p>Creamy, fresh, and full of flavor.</p>
+                <span>$9</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">Who We Are</h2>
+        <p>
+            At FreshBite, we deliver an elevated dining experience inspired by warm hospitality,
+            creative cuisine, and fresh ingredients. Every dish tells a story of flavor,
+            passion, and tradition.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 FreshBite Restaurant — Crafted With Love</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+header nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #e74c3c;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-text {
+    color: white;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.cta {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #c0392b;
+}
+
+/* MENU */
+.menu {
+    padding: 80px 40px;
+    background: #f7f7f7;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+.item span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 50px;
+    background: #fafafa;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+console.log("FreshBite Website Running...");
+
+function openBooking() {
+    alert("Table booking system coming soon!");
+}
